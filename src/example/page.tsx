@@ -1,4 +1,4 @@
-import Loading from 'app/common/components/ui/loading';
+import Loading from '../common/components/ui/loading';
 import Link from 'next/link';
 import { Suspense } from 'react';
 
