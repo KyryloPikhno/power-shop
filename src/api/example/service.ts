@@ -1,37 +1,37 @@
-import dbConnect from '@api/db-connect';
-import type { IExample } from '@interfaces/example';
+import dbConnect from "@api/db-connect"
+import type { IExample } from "@interfaces/example"
 
-import Example from './model';
+import Example from "./model"
 
 export const createExample = async ({ title, description }: IExample) => {
-  await dbConnect();
-  const data = await Example.create({ title, description });
+  await dbConnect()
+  const data = await Example.create({ title, description })
 
-  return data;
-};
+  return data
+}
 
 export const getExample = async () => {
-  await dbConnect();
-  const data = await Example.find({});
+  await dbConnect()
+  const data = await Example.find({})
 
-  return data;
-};
+  return data
+}
 
 export const findExampleByTitle = async (title: string) => {
-  await dbConnect();
-  const data = await Example.find({ title: { $regex: title, $options: 'i' } });
+  await dbConnect()
+  const data = await Example.find({ title: { $regex: title, $options: "i" } })
 
-  return data;
-};
+  return data
+}
 
 export const deleteExample = async (id: string) => {
-  await dbConnect();
-  await Example.findByIdAndDelete(id);
-};
+  await dbConnect()
+  await Example.findByIdAndDelete(id)
+}
 
 export const findExampleDetailById = async (id: string) => {
-  await dbConnect();
-  const data = await Example.findOne({ _id: id });
+  await dbConnect()
+  const data = await Example.findOne({ _id: id })
 
-  return data;
-};
+  return data
+}
