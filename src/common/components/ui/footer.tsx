@@ -1,6 +1,4 @@
-import { AiFillGithub } from 'react-icons/ai';
-
-
+import { AiFillGithub } from "react-icons/ai"
 
 function Footer() {
   return (
@@ -8,14 +6,14 @@ function Footer() {
       <a
         className="ml-2 flex items-center gap-x-1 text-black"
         href="https://github.com/bysxx/next-ts-template-tailwind"
-        target="_blank"
         rel="noreferrer"
+        target="_blank"
       >
         <AiFillGithub />
         <span>Source Code</span>
       </a>
     </footer>
-  );
+  )
 }
 
-export default Footer;
+export default Footer
